@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Winner!</title>
+</head>
+<body>
+
+<h1>Congratulations!</h1>
+<p th:text="'Player ' + ${winner} + ' wins!'"></p>
+
+<form action="/resetGame" method="get">
+    <label for="sizeInput">Enter board size:</label>
+    <input type="number" id="sizeInput" name="size" required>
+    <input type="submit" value="Play Again">
+</form>
+
+</body>
+</html>
